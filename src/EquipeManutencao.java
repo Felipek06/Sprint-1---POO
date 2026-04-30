@@ -1,0 +1,31 @@
+public class EquipeManutencao {
+    private final String nome;
+    private final int quantidadeIntegrantes;
+
+    public EquipeManutencao(String nome, int quantidadeIntegrantes) {
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("O nome da equipe não pode ser vazio.");
+        }
+        if (quantidadeIntegrantes < 1) {
+            throw new IllegalArgumentException(
+                    "A equipe deve ter ao menos 1 integrante. Valor recebido: " + quantidadeIntegrantes
+            );
+        }
+        this.nome = nome;
+        this.quantidadeIntegrantes = quantidadeIntegrantes;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getQuantidadeIntegrantes() {
+        return quantidadeIntegrantes;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("[EquipeManutencao | %s | %d integrante(s)]", nome, quantidadeIntegrantes);
+    }
+
+}
