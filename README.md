@@ -65,7 +65,6 @@ O problema mais grave não é o valor em si — é que o ponto de corrupção es
 
 ### Decisões de Clean Code
 •	Nomes expressivos: classes com substantivos (TrechoRodovia, EquipeManutencao), métodos com verbos no infinitivo (registrarCrescimento, associarEquipe).
-•	Imutabilidade onde cabe: quilômetros são final — um trecho não muda seus limites após criado.
 •	Exceções em vez de prints: IllegalArgumentException permite que o chamador decida como tratar o erro.
 •	Validações privadas isoladas: cada regra de domínio vive em seu próprio método privado, mantendo o construtor limpo.
 •	Sem setters públicos desnecessários: o estado só muda por métodos de domínio com semântica clara.
