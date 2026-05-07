@@ -1,5 +1,5 @@
 public class TrechoRodovia {
-    private static final double nivelCriticocm = 50;
+    private static final double NIVEL_CRITICO_CM = 50;
 
     private int quilometroInicial;
     private int quilometroFinal;
@@ -26,7 +26,7 @@ public class TrechoRodovia {
     }
 
     public boolean isCritico(){
-        return nivelVegetacaoCm >= nivelCriticocm;
+        return nivelVegetacaoCm >= NIVEL_CRITICO_CM;
     }
 
     public void associarEquipe(EquipeManutencao equipe) {
@@ -37,7 +37,6 @@ public class TrechoRodovia {
     }
 
     private void validarQuilometroInicial(int km) {
-        //Rodovias começam podem começar no kilometro 0
         if (km < 0) {
             throw new IllegalArgumentException(
                     "O quilômetro inicial não pode ser negativo. Valor recebido: " + km
